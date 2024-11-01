@@ -3,8 +3,6 @@
 
 	export let className: string | undefined = undefined;
 	export let title: string | HTMLElement | undefined = undefined;
-	export let description: string | HTMLElement | undefined = undefined;
-	export let icon: HTMLElement | undefined = undefined;
 </script>
 
 <div
@@ -15,12 +13,8 @@
 >
 	<slot name="header" />
 	<div class="transition duration-200 group-hover/bento:translate-x-2">
-		<slot name="icon" />
 		<div class="mb-2 mt-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
 			{title}
-		</div>
-		<div class="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
-			{description}
 		</div>
 	</div>
 </div>

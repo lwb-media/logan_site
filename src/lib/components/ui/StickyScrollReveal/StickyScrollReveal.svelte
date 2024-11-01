@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	let activeCard = 0;
-	let backgroundColors = ['var(--slate-900)', 'var(--black)', 'var(--neutral-900)'];
+	let backgroundColors = ['var(--black)', 'var(--black)', 'var(--black)'];
 	let linearGradients = [
 		'linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))',
 		'linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))',
@@ -42,7 +42,7 @@
 <div
 	bind:this={ref}
 	style="background-color: {backgroundColors[activeCard % backgroundColors.length]}"
-	class="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-md p-10 transition ease-in-out"
+	class="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-md p-10 transition ease-in-out overflow-hidden"
 >
 	<div class="div relative flex items-start px-4">
 		<div class="max-w-2xl">
@@ -62,7 +62,7 @@
 					</p>
 				</div>
 			{/each}
-			<div class="h-40" />
+			<div class="h-40"></div>
 		</div>
 	</div>
 	<div
