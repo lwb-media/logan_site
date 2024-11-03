@@ -14,6 +14,7 @@
 
 <div
  class="calendly-inline-widget"
+ id="calendly"
  data-url={url}
  style="min-width:320px;height:100vh;"
 ></div>

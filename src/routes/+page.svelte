@@ -3,34 +3,11 @@
 	import { CalendlyEmbed } from '$lib/components/CalendlyEmbed';
 	import { StickyScrollReveal } from '$lib/components/ui/StickyScrollReveal';
 	import { BentoGrid, BentoGridItem } from '$lib/components/ui/BentoGrid';
-	
+	import { bentoItems, CALENDLY_LINK, philosophy, INSTAGRAM_LINK, MAIL_LINK, ACCENT_COLOR } from '$lib/content';
+	import { Instagram, Mail } from 'lucide-svelte';
+	import '../app.css';
 
-	//IMPORTANT VARIABLES
-	const CALENDLY_LINK = 'https://calendly.com/lwbgrowthagency/60min';
-
-	const items = [
-		{
-			title: 'Total Revenue Generated',
-			stat: '$432 Thousand',
-			className: 'md:col-span-2',
-		},
-		{
-			title: 'Clients Helped',
-			className: 'md:col-span-1',
-		},
-		{
-			title: 'Offices',
-			className: 'md:col-span-1',
-		},
-		{
-			title: 'Services Offered',
-			className: 'md:col-span-1',
-		},
-		{
-			title: 'Total Ad Spend',
-			className: 'md:col-span-1',
-		}
-	];
+	const words = [{ text: 'Test' }, { text: 'So' }, { text: 'Sigma0' }, { text: 'Rizz' }];
 </script>
 
 <div class="w-full p-5">
@@ -46,68 +23,57 @@
 		>
 			We Help Influencers Boost <br /> Their Revenue Via Paid Communities
 		</h2>
+
 		<p class="mx-auto mt-4 max-w-lg text-center text-base font-normal text-neutral-300">
 			Stop letting companies rent out your audience. It's time to directly monetize your audience,
 			build a paid community and scale your revenue.
 		</p>
+		<a 
+		class={"block my-4 px-8 py-2 w-fit text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg bg-" + ACCENT_COLOR}
+		href="#calendly"
+		> 
+		Schedule your Free Appointment!
+	</a>
 	</WavyBackground>
 
-		<!-- Philosophy -->
-		<StickyScrollReveal
-		content={[
-			{
-				title: 'Philosophy',
-				description: `At LWB Media, we believe influencers should own and maximize the full potential of their brand
-and audience. For too long, influencers have allowed external companies to take avangage and
-profit from their audience.`
-			},
-			{
-				title: 'Mission',
-				description: `Our mission is to empower influencers by helping them take control of
-their revenue through building authentic, paid communities that foster deeper connections with
-their audience and have lasting value.`
-			},
-			{
-				title: 'Commitment',
-				description: `We are committed to bridging the gap between
-influencers and their audience, creating a future where creators are fully in control of their
-community, impact, and financial success.`
-			},
-			{
-				title: 'Success',
-				description: `Our client success stories are legendary, and you could be next. We’d be honored to help you
-achieve the same. Schedule your free call below. Add meet link`
-			}
-		]}
-	/>
-	
-	<div class="w-full my-44"></div>
+	<!-- Philosophy -->
+	<StickyScrollReveal content={philosophy} />
+
+	<div class="w-full my-[30vh]"></div>
 
 	<!-- Stats -->
 	<div>
 		<BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-			{#each items as item, i (i)}
+			{#each bentoItems as item, i (i)}
 				<BentoGridItem title={item.title} className={item.className}>
-					<div
-						slot="header"
-						class="text-center align-middle w-full h-full"
-					>
-						<h1 class="text-pink-500">{item.stat}</h1>
+					<div slot="header" class="w-full h-full flex justify-center items-center">
+						<span class={" font-nunito text-[5vh] text-" + ACCENT_COLOR}>{item.stat}</span>
 					</div>
 				</BentoGridItem>
 			{/each}
 		</BentoGrid>
 	</div>
 
+	<div class="w-full my-[30vh]"></div>
+
 	<!-- Calendly Embed -->
 	<CalendlyEmbed url={CALENDLY_LINK} />
 
-	<div class="w-full my-44"></div>
+	<div class="w-full my-[5vh]"></div>
 
-	
+	<!-- Footer -->
+	<div class="w-full flex flex-row justify-center">
+		<div class="block">
+			<span class="text-white">Contact Us</span>
+			<br />
+			<span class="flex flex-row">
+				<a href={INSTAGRAM_LINK} target="_blank">
+					<Instagram class="m-2" color="white" />
+				</a>
+				<a href={MAIL_LINK} target="_blank">
+					<Mail class="m-2" color="white" />
+				</a>
+			</span>
+		</div>
+	</div>
 </div>
-
-<style lang="css">
-	@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@1000&display=swap');
-
-</style>
