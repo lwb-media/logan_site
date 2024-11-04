@@ -29,25 +29,25 @@
 			build a paid community and scale your revenue.
 		</p>
 		<a 
-		class={"block my-4 px-8 py-2 w-fit text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg bg-" + ACCENT_COLOR}
+		class={"block my-4 px-8 py-2 w-fit text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg bg-sky-500"}
 		href="#calendly"
 		> 
-		Schedule your Free Appointment!
+		Speak to our Team Today
 	</a>
 	</WavyBackground>
 
 	<!-- Philosophy -->
-	<StickyScrollReveal content={philosophy} />
+
 
 	<div class="w-full my-[30vh]"></div>
 
 	<!-- Stats -->
 	<div>
-		<BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+		<BentoGrid className="max-w-4xl md:auto-rows-[20rem]">
 			{#each bentoItems as item, i (i)}
 				<BentoGridItem title={item.title} className={item.className}>
 					<div slot="header" class="w-full h-full flex justify-center items-center">
-						<span class={" font-nunito text-[5vh] text-" + ACCENT_COLOR}>{item.stat}</span>
+						<span class={" font-nunito text-[5vh] text-sky-500"}>{item.stat}</span>
 					</div>
 				</BentoGridItem>
 			{/each}

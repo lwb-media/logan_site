@@ -32,8 +32,8 @@
 	};
 
 	const init = () => {
-		console.log(canvasRef);
 		canvas = canvasRef;
+		canvas.style.webkitFilter = `blur(${blur}px)`
 		ctx = canvas.getContext('2d');
 		console.log('ctx', ctx);
 		w = ctx.canvas.width = window.innerWidth;
@@ -82,7 +82,7 @@
 </script>
 
 <div class={cn('flex h-screen flex-col items-center justify-center', containerClassName)}>
-	<canvas class="absolute inset-0 z-0" bind:this={canvasRef} id="canvas"></canvas>
+	<canvas class="absolute inset-0 z-0 backdrop-blur-sm" bind:this={canvasRef} id="canvas"></canvas>
 	<div class={cn('relative z-10', className)} {...$$props}>
 		<slot />
 	</div>

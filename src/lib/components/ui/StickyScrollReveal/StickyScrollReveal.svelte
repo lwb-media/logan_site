@@ -44,7 +44,7 @@
 <div
 	bind:this={ref}
 	style="background: {backgroundColors[activeCard % backgroundColors.length]}"
-	class="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-md p-10 transition ease-in-out no-scrollbar"
+	class="relative flex justify-center space-x-10 overflow-y-auto rounded-md p-10 transition ease-in-out no-scrollbar"
 >
 	<div class="div relative flex items-start px-4">
 		<div class="max-w-2xl">
@@ -83,6 +83,6 @@
 	<div
 		style="background: {linearGradients[activeCard % linearGradients.length]}"
 		class="sticky top-10 h-60 w-80 overflow-hidden rounded-md bg-white lg:block flex flex-col content-center">
-	<img src={"/logos/transparent-full-logo.png"}/>
+	<img src={"/logos/transparent-full-logo.png"} alt="test" />
 </div>
 </div>
