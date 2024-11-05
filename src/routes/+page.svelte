@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { WavyBackground } from '$lib/components/ui/WavyBackground';
 	import { CalendlyEmbed } from '$lib/components/CalendlyEmbed';
-	import { StickyScrollReveal } from '$lib/components/ui/StickyScrollReveal';
-	import { BentoGrid, BentoGridItem } from '$lib/components/ui/BentoGrid';
-	import { bentoItems, CALENDLY_LINK, philosophy, INSTAGRAM_LINK, MAIL_LINK, ACCENT_COLOR } from '$lib/content';
-	import { Instagram, Mail } from 'lucide-svelte';
+	import { SpeakToTeamButton } from '$lib/components/SpeakToTeamButton';
+	import { CircleX } from 'lucide-svelte';
 	import '../app.css';
-
+	const CALENDLY_LINK = 'https://calendly.com/lwbgrowthagency/60min';
 </script>
 
 <div class="w-full p-5">
@@ -27,31 +25,70 @@
 			Stop letting companies rent out your audience. It's time to directly monetize your audience,
 			build a paid community and scale your revenue.
 		</p>
-		<a 
-		class={"block my-4 px-8 py-2 w-fit text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg bg-sky-500"}
-		href="#calendly"
-		> 
-		Speak to our Team Today
-	</a>
+
+		<span class="flex flex-row justify-center">
+			<SpeakToTeamButton />
+		</span>
 	</WavyBackground>
 
-	<!-- Philosophy -->
+	
+	<div class="w-full my-[10vh]"></div>
 
+	<!-- Stats and Philosophy -->
+	<div class="w-full flex flex-wrap flex-row justify-evenly">
+			<!-- Stats -->
+		<div class="w-full sm:w-[30%] mb-16 sm:mb-0">
+		 <img src={"/stats.png"} alt="Statistics" class="w-full" />
+	 </div>
+
+		<!-- Philosophy -->
+		<div class="w-full pt-0 sm:w-[30%]">
+			<h1 class="text-sky-500 font-nunito font-black text-3xl sm:text-5xl text-center m-4">Our Philosophy at LWB Media</h1>
+			<p class="text-white text-center text-sm sm:text-xl">At LWB Media, we believe influencers should own and maximize the full potential of their brand and audience. For too long, influencers have allowed external companies to take avangage and profit from their audience. Our mission is to empower influencers by helping them take control of their revenue through building authentic, paid communities that foster deeper connections with their audience and have lasting value. We are committed to bridging the gap between influencers and their audience, creating a future where creators are fully in control of their community, impact, and financial success.			</p>
+			<span class="flex flex-row justify-center">
+				<SpeakToTeamButton />
+			</span>
+		</div>
+	</div>
 
 	<div class="w-full my-[30vh]"></div>
 
-	<!-- Stats -->
-	<div>
-		<BentoGrid className="max-w-4xl md:auto-rows-[20rem]">
-			{#each bentoItems as item, i (i)}
-				<BentoGridItem title={item.title} className={item.className}>
-					<div slot="header" class="w-full h-full flex justify-center items-center">
-						<span class={" font-nunito text-[5vh] text-sky-500"}>{item.stat}</span>
-					</div>
-				</BentoGridItem>
-			{/each}
-		</BentoGrid>
+	<!-- Paid Advertising -->
+	<div class="text-white w-full flex flex-wrap flex-row justify-evenly">
+		<!-- Stats -->
+	<div class="w-full sm:w-[30%] mb-16 sm:mb-0">
+		<p class="text-white text-md sm:text-2xl">What we offer</p>
+		<h1 class="text-sky-500 font-nunito font-black text-3xl sm:text-5xl ml-0 m-4">Paid Communities Tailored To Your Audience</h1>
+		<p class="text-white font-thin text-sm sm:text-xl">
+			We focus on one thing—and we do it better than anyone else. If you're looking for an agency that offers a broad, full-service solution that tries to do everything, but doesn’t really move the needle, then we’re not for you.
+			<br />
+			<br />
+			But if you’re seeking an agency that with just a few clicks is laser-focused on helping you build a paid community that delivers real, tangible results. We’re for you.
+		</p>
+		<SpeakToTeamButton />
 	</div>
+
+	<!-- What we offer -->
+	<div class="w-full pt-0 sm:w-[30%]">
+		<h1 class="text-sky-500 font-nunito font-black text-xl sm:text-3xl">True Mastery Requires Focus, so…</h1>
+		<p class="text-white text-xs sm:text-lg capitalize italic font-thin">
+			 We only offer one service
+		</p>
+		<br>
+		<div class="flex flex-col">
+			<ul>
+				{#each ["Content Creation", "Webdesign", "Social Media Management", "Email Marketing", "PR Service", "Instagram Growth"] as title}
+				<li class="flex my-3 text-white font-nunito text-md sm:text-lg align-top">
+					<CircleX class="mr-2" color="red" /> 
+					{title}
+				</li>
+				{/each}
+			</ul>
+		</div>
+
+	</div>
+</div>
+
 
 	<div class="w-full my-[30vh]"></div>
 
@@ -62,16 +99,11 @@
 
 	<!-- Footer -->
 	<div class="w-full flex flex-row justify-center">
-		<div class="block">
-			<span class="text-white">Contact Us</span>
-			<br />
-			<span class="flex flex-row">
-				<a href={INSTAGRAM_LINK} target="_blank">
-					<Instagram class="m-2" color="white" />
-				</a>
-				<a href={MAIL_LINK} target="_blank">
-					<Mail class="m-2" color="white" />
-				</a>
+		<div class="flex flex-col w-full sm:w-[40vw] text-center content-center">
+			<span class="text-sky-500 font-nunito font-black text-2xl sm:text-5xl text-center">Have A General Inquiry?</span>
+			<span class="text-white text-lg sm:text-2xl text-center mb-4">If you have a general inquiry and would like to speak to our expert team, you can contact us via email at: logan@lwb-media.com</span>
+			<span class="flex flex-row justify-center">
+				<SpeakToTeamButton />
 			</span>
 		</div>
 	</div>
