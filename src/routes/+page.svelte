@@ -7,7 +7,6 @@
 	import { Instagram, Mail } from 'lucide-svelte';
 	import '../app.css';
 
-	const words = [{ text: 'Test' }, { text: 'So' }, { text: 'Sigma0' }, { text: 'Rizz' }];
 </script>
 
 <div class="w-full p-5">
