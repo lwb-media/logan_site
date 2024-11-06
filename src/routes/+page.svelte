@@ -44,9 +44,9 @@
 		<!-- Philosophy -->
 		<div class="w-full pt-0 sm:w-[30%]">
 			<h1 class="text-sky-500 font-nunito font-black text-3xl sm:text-5xl text-center m-4">Our Philosophy at LWB Media</h1>
-			<p class="text-white text-center text-sm sm:text-xl">At LWB Media, we believe influencers should own and maximize the full potential of their brand and audience. For too long, influencers have allowed external companies to take avangage and profit from their audience. Our mission is to empower influencers by helping them take control of their revenue through building authentic, paid communities that foster deeper connections with their audience and have lasting value. We are committed to bridging the gap between influencers and their audience, creating a future where creators are fully in control of their community, impact, and financial success.
-				Our client success stories are legendary, and you could be next. We’d be honored to help you achieve the same. Schedule your free call below
-				</p>
+			<p class="text-white text-center text-sm sm:text-xl">
+			At LWB Media, we empower influencers to take control of their brand and revenue. Instead of letting other profit from their audience, we help creators build authentic, paid communities that deepen connections and add lasting value. We'd be honored to help you achieve the same success—schedule your free call below 
+			</p>
 			<span class="flex flex-row justify-center">
 				<SpeakToTeamButton />
 			</span>
@@ -61,7 +61,7 @@
 	<div class="w-full sm:w-[30%] mb-16 sm:mb-0">
 		<p class="text-white text-md sm:text-2xl">What we offer</p>
 		<h1 class="text-sky-500 font-nunito font-black text-3xl sm:text-5xl ml-0 m-4">Paid Communities Tailored To Your Audience</h1>
-		<p class="text-white font-thin text-sm sm:text-xl">
+		<p class="text-white text-sm sm:text-xl">
 			We focus on one thing—and we do it better than anyone else. If you're looking for an agency that offers a broad, full-service solution that tries to do everything, but doesn’t really move the needle, then we’re not for you.
 			<br />
 			<br />
